@@ -9,9 +9,6 @@ local opts = { noremap = true, silent = true }
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
--- Delete a word backwards
-keymap.set("n", "dw", "vb_d")
-
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
@@ -19,9 +16,9 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "<C-m>", "<C-i>", opts)
 
 -- New tab
-keymap.set("n", "te", "tabedit", opts)
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+keymap.set("n", "te", ":tabedit<Return>", opts)
+keymap.set("n", "<`>", ":tabnext<Return>", opts)
+keymap.set("n", "<s-`>", ":tabprev<Return>", opts)
 
 -- Split buffer
 keymap.set("n", "ss", ":split<Return>", opts)
@@ -43,3 +40,5 @@ keymap.set("n", "<C-w><down>", "<C-w>-", opts)
 keymap.set("n", "<C-j", function()
   vim.diagnostics.goto_next()
 end, opts)
+
+-- Keymap to control and ` to toggle terminals

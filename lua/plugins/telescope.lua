@@ -39,5 +39,10 @@ return {
       "<cmd>TodoTelescope<Return>",
       desc = "Find todos",
     },
+    {
+      "<leader>fm",
+      "<cmd>Telescope marks<Return>",
+      desc = "find marks across project.",
+    },
   },
 }

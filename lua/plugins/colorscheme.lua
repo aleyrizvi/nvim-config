@@ -1,16 +1,20 @@
 return {
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "shaunsingh/nord.nvim",
+    -- "folke/tokyonight.nvim",
+    name = "nord",
+    -- "catppuccin/nvim",
+    -- name = "kanagawa",
+    -- name = "catppuccin",
     priority = 1000,
-    opts = {
-      transparent_background = true,
-    },
+    config = function()
+      require("nord").set()
+    end,
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-frappe",
+      colorscheme = "nord",
     },
   },
 }

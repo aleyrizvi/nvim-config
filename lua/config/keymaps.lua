@@ -17,8 +17,8 @@ keymap.set("n", "<C-m>", "<C-i>", opts)
 
 -- New tab
 keymap.set("n", "te", ":tabedit<Return>", opts)
-keymap.set("n", "<`>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-`>", ":tabprev<Return>", opts)
+keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
 -- Split buffer
 keymap.set("n", "ss", ":split<Return>", opts)

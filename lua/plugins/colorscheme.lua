@@ -1,20 +1,31 @@
 return {
   {
-    "shaunsingh/nord.nvim",
+    -- "shaunsingh/nord.nvim",
     -- "folke/tokyonight.nvim",
-    name = "nord",
-    -- "catppuccin/nvim",
+    -- name = "nord",
+    "catppuccin/nvim",
     -- name = "kanagawa",
-    -- name = "catppuccin",
+    name = "catppuccin",
     priority = 1000,
-    config = function()
-      require("nord").set()
-    end,
+    opts = {
+      integrations = {
+        cmp = true,
+        dap = true,
+        gitsigns = true,
+        neotree = true,
+        treesitter = true,
+        notify = false,
+        mini = {
+          enabled = true,
+          indentscope_color = "",
+        },
+      },
+    },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nord",
+      colorscheme = "catppuccin-frappe",
     },
   },
 }

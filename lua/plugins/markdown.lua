@@ -5,4 +5,11 @@ return {
   build = function()
     vim.fn["mkdp#util#install"]()
   end,
+  keys = {
+    {
+      "<leader>mp",
+      "<cmd>MarkdownPreview<Return>",
+      desc = "Markdown preview in browser",
+    },
+  },
 }

@@ -1,31 +1,14 @@
 return {
   {
-    -- "shaunsingh/nord.nvim",
-    -- "folke/tokyonight.nvim",
-    -- name = "nord",
-    "catppuccin/nvim",
-    -- name = "kanagawa",
-    name = "catppuccin",
+    -- "rmehri01/onenord.nvim",
+    "folke/tokyonight.nvim",
     priority = 1000,
-    opts = {
-      integrations = {
-        cmp = true,
-        dap = true,
-        gitsigns = true,
-        neotree = true,
-        treesitter = true,
-        notify = false,
-        mini = {
-          enabled = true,
-          indentscope_color = "",
-        },
-      },
-    },
+    opts = {},
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-frappe",
+      colorscheme = "tokyonight-moon",
     },
   },
 }

@@ -36,6 +36,9 @@ keymap.set("n", "<C-w><right>", "<C-w>>", opts)
 keymap.set("n", "<C-w><up>", "<C-w>+", opts)
 keymap.set("n", "<C-w><down>", "<C-w>-", opts)
 
+-- neovim source file
+keymap.set("n", "<leader>nr", ":source $MYVIMRC", opts)
+
 -- Diagnostics
 keymap.set("n", "<C-j", function()
   vim.diagnostics.goto_next()

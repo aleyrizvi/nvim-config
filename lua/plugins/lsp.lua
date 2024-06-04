@@ -67,6 +67,7 @@ return {
   {
     "nvimdev/lspsaga.nvim",
     after = "nvim-lspconfig",
+    event = "LspAttach",
     dependencies = {
       "nvim-treesitter/nvim-treesitter", -- optional
       "nvim-tree/nvim-web-devicons",

@@ -44,7 +44,12 @@ return {
   {
     "neovim/nvim-lspconfig",
     after = "mason-lspconfig.nvim",
-    event = "LazyFile",
+    cmd = {
+      "LspStart",
+      "LspRestart",
+      "LspStop",
+      "LspLog",
+    },
     dependencies = {
       "mason.nvim",
       "williamboman/mason-lspconfig.nvim",

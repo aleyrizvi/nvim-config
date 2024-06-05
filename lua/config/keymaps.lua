@@ -44,4 +44,4 @@ keymap.set("n", "<C-j", function()
   vim.diagnostics.goto_next()
 end, opts)
 
--- Keymap to control and ` to toggle terminals
+-- Keymap to control and ` to toggle termina s

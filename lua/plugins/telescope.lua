@@ -8,6 +8,7 @@ return {
     "folke/todo-comments.nvim",
   },
   keys = {
+    { "<leader>/", false },
     {
       "<C-p>",
       function()
@@ -25,7 +26,7 @@ return {
       desc = "Fuzzy find recent files",
     },
     {
-      "<leader>fs",
+      "<leader>fg",
       "<cmd>Telescope live_grep<Return>",
       desc = "Find string in cwd",
     },

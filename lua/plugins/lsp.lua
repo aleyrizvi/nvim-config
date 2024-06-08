@@ -21,6 +21,8 @@ return {
         "htmx",
         "helm_ls",
         "jsonls",
+        "java_language_server",
+        "jdtls",
         "tsserver",
         "biome",
         "lua_ls",
@@ -72,14 +74,56 @@ return {
       "nvim-treesitter/nvim-treesitter", -- optional
       "nvim-tree/nvim-web-devicons",
     },
-    config = function()
-      require("lspsaga").setup({})
-    end,
+    opts = {
+      lightbulb = {
+        enable = false,
+      },
+    },
     keys = {
       {
         "<leader>lo",
         "<cmd>Lspsaga outline<Return>",
         desc = "LSP Saga Outline",
+      },
+      {
+        "<leader>loc",
+        "<cmd>Lspsaga outgoing_calls<Return>",
+        desc = "LSP Saga outgoing calls",
+      },
+      {
+        "<leader>lic",
+        "<cmd>Lspsaga incoming_calls<Return>",
+        desc = "LSP Saga incoming calls",
+      },
+      {
+        "<leader>lca",
+        "<cmd>Lspsaga code_action<Return>",
+        desc = "LSP Saga code action",
+      },
+      {
+        "<leader>ld",
+        "<cmd>Lspsaga peek_definition<Return>",
+        desc = "LSP Saga peek definition",
+      },
+      {
+        "<leader>lD",
+        "<cmd>Lspsaga peek_type_definition<Return>",
+        desc = "LSP Saga peek type definition",
+      },
+      {
+        "<leader>lf",
+        "<cmd>Lspsaga finder<Return>",
+        desc = "LSP Saga finder",
+      },
+      {
+        "<leader>lh",
+        "<cmd>Lspsaga hover_doc<Return>",
+        desc = "LSP Saga hover docs",
+      },
+      {
+        "<leader>lr",
+        "<cmd>Lspsaga rename<Return>",
+        desc = "LSP Saga rename",
       },
     },
   },

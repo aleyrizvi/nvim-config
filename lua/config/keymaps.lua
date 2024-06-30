@@ -36,6 +36,12 @@ keymap.set("n", "<C-w><right>", "<C-w>>", opts)
 keymap.set("n", "<C-w><up>", "<C-w>+", opts)
 keymap.set("n", "<C-w><down>", "<C-w>-", opts)
 
+-- DAP
+keymap.set("n", "<F5>", ':lua require"dap".continue()<CR>')
+keymap.set("n", "<F8>", ':lua require"dap".step_over()<CR>')
+keymap.set("n", "<F7>", ':lua require"dap".step_into()<CR>')
+keymap.set("n", "<S-F8>", ':lua require"dap".step_out()<CR>')
+
 -- neovim source file
 keymap.set("n", "<leader>nr", ":source $MYVIMRC", opts)
 

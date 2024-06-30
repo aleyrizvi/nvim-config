@@ -21,7 +21,6 @@ return {
         "htmx",
         "helm_ls",
         "jsonls",
-        "java_language_server",
         "jdtls",
         "tsserver",
         "biome",

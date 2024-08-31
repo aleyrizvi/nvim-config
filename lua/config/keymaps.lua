@@ -24,12 +24,6 @@ keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
 
--- Move buffer
-keymap.set("n", "sh", "<C-w>h", opts)
-keymap.set("n", "sk", "<C-w>k", opts)
-keymap.set("n", "sj", "<C-w>j", opts)
-keymap.set("n", "sl", "<C-w>l", opts)
-
 -- Resize buffer
 keymap.set("n", "<C-w><left>", "<C-w><", opts)
 keymap.set("n", "<C-w><right>", "<C-w>>", opts)

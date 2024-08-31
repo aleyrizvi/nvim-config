@@ -373,8 +373,6 @@ return {
       -- vim.g.gruvbox_material_colors_override = { bg0 = '#000000' } -- #0e1010
       -- vim.g.gruvbox_material_colors_override = { bg0 = "#121212" }
       -- vim.g.gruvbox_material_better_performance = 1
-
-      vim.cmd.colorscheme("gruvbox-material")
     end,
   },
   {
@@ -540,7 +538,7 @@ return {
           darken = { -- Darken floating windows and sidebar-like windows
             floats = true,
             sidebars = {
-              enabled = true,
+              enable = true,
               list = {}, -- Apply dark background to specific windows
             },
           },
@@ -556,5 +554,19 @@ return {
       -- setup must be called before loading
       -- vim.cmd("colorscheme github_dark_dimmed")
     end,
+  },
+  {
+    "sainnhe/everforest",
+    opts = {
+      -- transparent_background = true,
+      -- Italic comments
+      italics = true,
+    },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "gruvbox-material",
+    },
   },
 }

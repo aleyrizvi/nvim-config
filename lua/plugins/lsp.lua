@@ -80,7 +80,7 @@ return {
     },
     keys = {
       {
-        "<leader>lo",
+        "<leader>lu",
         "<cmd>Lspsaga outline<Return>",
         desc = "LSP Saga Outline",
       },
@@ -129,8 +129,8 @@ return {
   {
     "folke/which-key.nvim",
     opts = {
-      defaults = {
-        ["<leader>l"] = { name = "+LSP Saga" },
+      spec = {
+        { "<leader>l", group = "LSP Saga" },
       },
     },
   },

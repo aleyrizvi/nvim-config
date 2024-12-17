@@ -21,21 +21,10 @@ return {
         "<cmd>Telescope file_browser<Return>",
         desc = "Fuzzy file browser",
       },
-
-      {
-        "<leader>ff",
-        "<cmd>Telescope find_files<Return>",
-        desc = "Fuzzy find files in cwd",
-      },
-      {
-        "<leader>fr",
-        "<cmd>Telescope oldfiles<Return>",
-        desc = "Fuzzy find recent files",
-      },
       {
         "<leader>fg",
         "<cmd>Telescope live_grep<Return>",
-        desc = "Find string in cwd",
+        desc = "Find string via grep",
       },
       {
         "<leader>fc",

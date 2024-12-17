@@ -1,5 +1,10 @@
 return {
   {
+    "sainnhe/sonokai",
+    lazy = false,
+    priority = 1000,
+  },
+  {
     "catppuccin/nvim",
     priority = 150,
     name = "catppuccin",
@@ -566,7 +571,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "sonokai",
     },
   },
 }

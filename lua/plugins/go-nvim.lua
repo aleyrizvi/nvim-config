@@ -1,64 +1,58 @@
-return {}
--- return {
---   {
---     "ray-x/go.nvim",
---     dependencies = { -- optional packages
---       "ray-x/guihua.lua",
---       "neovim/nvim-lspconfig",
---       "nvim-treesitter/nvim-treesitter",
---
---       "leoluz/nvim-dap-go",
---     },
---     config = function()
---       local capabilities = require("cmp_nvim_lsp").default_capabilities()
---
---       require("go").setup({
---         capabilities = capabilities,
---         -- lsp_on_attach = require("plugins.lsp.on_attach").on_attach,
---         lsp_cfg = {
---           settings = {
---             gopls = {
---               gofumpt = true,
---               codelenses = {
---                 gc_details = false,
---                 generate = true,
---                 regenerate_cgo = true,
---                 run_govulncheck = true,
---                 test = true,
---                 tidy = true,
---                 upgrade_dependency = true,
---                 vendor = true,
---               },
---               hints = {
---                 assignVariableTypes = true,
---                 compositeLiteralFields = false,
---                 compositeLiteralTypes = false,
---                 constantValues = false,
---                 functionTypeParameters = false,
---                 parameterNames = false,
---                 rangeVariableTypes = false,
---               },
---               analyses = {
---                 fieldalignment = true,
---                 nilness = true,
---                 unusedparams = true,
---                 unusedwrite = true,
---                 useany = true,
---               },
---               usePlaceholders = true,
---               completeUnimported = true,
---               staticcheck = true,
---               directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
---               semanticTokens = false,
---             },
---           },
---         },
---         luasnip = true,
---         trouble = true,
---       })
---     end,
---     event = { "CmdlineEnter" },
---     ft = { "go", "gomod" },
---     build = ':lua require("go.install").update_all_sync()',
---   },
--- }
+return {
+  {
+    "ray-x/go.nvim",
+    dependencies = { -- optional packages
+      "ray-x/guihua.lua",
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
+
+      "leoluz/nvim-dap-go",
+    },
+    config = function()
+      require("go").setup({
+        goimports = "gopls",
+        gofmt = "gofumpt",
+        luasnip = true,
+        trouble = true,
+        lsp_gofumpt = true,
+        lsp_inlay_hints = {
+          enable = false, -- this is the only field apply to neovim > 0.10
+
+          -- following are used for neovim < 0.10 which does not implement inlay hints
+          -- hint style, set to 'eol' for end-of-line hints, 'inlay' for inline hints
+          style = "inlay",
+          -- Note: following setup only works for style = 'eol', you do not need to set it for 'inlay'
+          -- Only show inlay hints for the current line
+          only_current_line = true,
+          -- Event which triggers a refersh of the inlay hints.
+          -- You can make this "CursorMoved" or "CursorMoved,CursorMovedI" but
+          -- not that this may cause higher CPU usage.
+          -- This option is only respected when only_current_line and
+          -- autoSetHints both are true.
+          only_current_line_autocmd = "CursorHold",
+          -- whether to show variable name before type hints with the inlay hints or not
+          -- default: false
+          show_variable_name = true,
+          -- prefix for parameter hints
+          parameter_hints_prefix = "󰊕 ",
+          show_parameter_hints = true,
+          -- prefix for all the other hints (type, chaining)
+          other_hints_prefix = "=> ",
+          -- whether to align to the length of the longest line in the file
+          max_len_align = false,
+          -- padding from the left if max_len_align is true
+          max_len_align_padding = 1,
+          -- whether to align to the extreme right or not
+          right_align = false,
+          -- padding from the right if right_align is true
+          right_align_padding = 6,
+          -- The color of the hints
+          highlight = "Comment",
+        },
+      })
+    end,
+    event = { "CmdlineEnter" },
+    ft = { "go", "gomod" },
+    build = ':lua require("go.install").update_all_sync()',
+  },
+}

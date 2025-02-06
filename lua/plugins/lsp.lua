@@ -73,6 +73,9 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
+      implement = {
+        enable = true,
+      },
       lightbulb = {
         enable = false,
       },
@@ -87,6 +90,11 @@ return {
         "<leader>loc",
         "<cmd>Lspsaga outgoing_calls<Return>",
         desc = "LSP Saga outgoing calls",
+      },
+      {
+        "<leader>lf",
+        "<cmd>Lspsaga finder imp<Return>",
+        desc = "Lspsaga finder imp",
       },
       {
         "<leader>lic",

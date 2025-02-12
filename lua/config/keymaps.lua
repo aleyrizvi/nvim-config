@@ -5,6 +5,11 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Remove unnecessary keymaps
+keymap.del("n", "<leader>ft", opts)
+keymap.del("n", "<leader>fT", opts)
+keymap.del("n", "<leader>l", opts)
+
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")

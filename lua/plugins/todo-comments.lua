@@ -1,9 +1,18 @@
 return {
   "folke/todo-comments.nvim",
-  enabled = false,
+  enabled = true,
   dependencies = "nvim-lua/plenary.nvim",
-  cmd = { "TodoTrouble", "TodoTelescope" },
   event = { "BufReadPost", "BufNewFile" },
+  keys = {
+    {
+      "<leader>ft",
+      function()
+        Snacks.picker.todo_comments()
+      end,
+      desc = "Find TODO",
+      { noremap = true, silent = true },
+    },
+  },
   config = function()
     require("todo-comments").setup({
       keywords = {

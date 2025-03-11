@@ -4,6 +4,7 @@
 --
 
 vim.opt.relativenumber = false
+vim.opt.showtabline = 0
 
 -- Run gofmt + goimports on save
 local format_sync_grp = vim.api.nvim_create_augroup("goimports", {})

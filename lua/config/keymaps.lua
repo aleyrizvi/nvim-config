@@ -15,3 +15,10 @@ keymap.del("n", "<leader>l", opts)
 
 -- git keymaps to remove for golang keywords
 keymap.del("n", "<leader>gc", opts)
+
+-- Select all
+keymap.set("n", "<C-a>", "gg<S-v>G")
+
+-- Split buffer
+keymap.set("n", "ss", ":split<Return>", opts)
+keymap.set("n", "sv", ":vsplit<Return>", opts)

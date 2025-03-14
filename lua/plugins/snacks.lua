@@ -7,7 +7,7 @@ return {
     opts = {
       bigfile = { enabled = true },
       dashboard = { enabled = true },
-      explorer = { enabled = true },
+      explorer = { enabled = true, show_hidden = true },
       indent = { enabled = false },
       input = { enabled = true },
       notifier = {
@@ -15,6 +15,9 @@ return {
         timeout = 3000,
       },
       picker = {
+        grep = {
+          show_hidden = true,
+        },
         enabled = true,
       },
       quickfile = { enabled = true },

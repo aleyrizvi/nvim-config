@@ -19,6 +19,7 @@ return {
           show_hidden = true,
         },
         enabled = true,
+        ignored = true,
       },
       quickfile = { enabled = true },
       scope = { enabled = true },

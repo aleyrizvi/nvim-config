@@ -20,6 +20,9 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
     { import = "lazyvim.plugins.extras.lang.go" },
+    { import = "lazyvim.plugins.extras.lang.yaml" },
+    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
+
     -- import/override with your plugins
     { import = "plugins" },
   },
